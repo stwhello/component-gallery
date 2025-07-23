@@ -1,0 +1,101 @@
+.headerTwo {
+  width: calc(100vw - 18vw); // account for sidebar
+  height: 10vh;
+  background: rgba(30, 30, 47, 0.7);
+  backdrop-filter: blur(1vh);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+  position: fixed;
+  top: 0;
+  left: 18vw;
+  z-index: 1000;
+  box-shadow: 0 0.4vh 1vh rgba(0, 0, 0, 0.25);
+  animation: slideDown 0.6s ease;
+  margin-top: 8%;
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+    .logo-icon {
+      font-size: 2vw;
+      color: #61dafb;
+    }
+
+    span {
+      font-size: 1.3vw;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2vw;
+
+    a {
+      position: relative;
+      font-size: 1vw;
+      text-decoration: none;
+      color: #cfd8dc;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.3vh;
+        width: 0;
+        height: 0.3vh;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        transition: width 0.4s ease;
+      }
+
+      &:hover {
+        color: #ffffff;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &.active {
+        color: #ffffff;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .cta-btn {
+    padding: 0.8vh 2vw;
+    font-size: 0.9vw;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// entry animation
+@keyframes slideDown {
+  from {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

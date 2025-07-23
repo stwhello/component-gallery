@@ -1,0 +1,116 @@
+.headerThree {
+  width: calc(100vw - 18vw);
+  height: 10vh;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+  position: fixed;
+  top: 0;
+  left: 18vw;
+  z-index: 999;
+  box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.8s ease-in-out;
+margin-top: 16%;
+  .logo-burst {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: #fff;
+    font-size: 1.3vw;
+    font-weight: 700;
+    animation: pulse 3s infinite;
+
+    .icon {
+      font-size: 2vw;
+      color: #ffe600;
+      animation: spin 4s linear infinite;
+    }
+  }
+
+  .nav-pops {
+    display: flex;
+    gap: 2vw;
+
+    a {
+      position: relative;
+      color: #fff;
+      font-size: 1vw;
+      text-decoration: none;
+      padding: 0.3vh 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.3vh;
+        bottom: -0.5vh;
+        left: 0;
+        background: #fff;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease;
+      }
+
+      &:hover {
+        color: #ffe600;
+        transform: scale(1.1);
+
+        &::before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+
+      &.active {
+        color: #ffe600;
+
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .launch-btn {
+    background: #ffe600;
+    color: #1e1e2f;
+    padding: 0.8vh 2vw;
+    font-size: 1vw;
+    font-weight: bold;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background: #ffffff;
+      color: #ff6ec4;
+      transform: scale(1.05) rotate(-1deg);
+    }
+  }
+}
+
+// Animations
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
