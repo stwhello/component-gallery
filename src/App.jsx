@@ -12,14 +12,14 @@ import Footer from './pages/footer/Footer';
 function App() {
   const [collapsed, setCollapsed] = useState(false);
 
-  const sidebarWidth = collapsed ? '5vw' : '14vw';
+  const sidebarWidth = collapsed ? '5vw' : '13vw';
   const contentWidth = collapsed ? '95vw' : '82vw';
 
   return (
     <Router>
       <div style={{ display: 'flex' }}>
         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
-        <div style={{ marginLeft: sidebarWidth, padding: '2vh 2vw', width: contentWidth }}>
+        <div style={{ marginLeft: sidebarWidth, padding: '2vh 0vw', width: contentWidth }}>
           <Routes>
             <Route path="/" element={<Navigate to="/header" replace />} />
             <Route path="/header" element={<Header />} />

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
 .headerFour {
-  width: calc(100vw - 14vw);
+  width: 80vw;
   height: 10vh;
   padding: 0 3vw;
   background: repeating-linear-gradient(
@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  left: 14vw;
+  left: 13vw;
   top: 0;
   z-index: 1000;
   font-family: 'Orbitron', sans-serif;
@@ -101,7 +101,7 @@
   }
 }
 
-// Glitch Animations
+
 @keyframes glitch {
   0% { transform: translate(0); }
   20% { transform: translate(-1px, 1px); }
@@ -123,7 +123,6 @@
   100% { clip-path: inset(80% 0 0 0); }
 }
 
-// Dot pulse animation
 @keyframes pulse {
   0% {
     transform: scale(1);
