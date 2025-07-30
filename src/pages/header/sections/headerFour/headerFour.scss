@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
 .headerFour {
-  width: calc(100vw - 18vw);
+  width: calc(100vw - 14vw);
   height: 10vh;
   padding: 0 3vw;
   background: repeating-linear-gradient(
@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  left: 18vw;
+  left: 14vw;
   top: 0;
   z-index: 1000;
   font-family: 'Orbitron', sans-serif;

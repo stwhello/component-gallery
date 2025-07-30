@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {
-  FaBars, FaHome, FaImage, FaSlidersH,
+  FaHome, FaImage, FaSlidersH,
   FaLayerGroup, FaHeading, FaRegWindowMaximize
 } from 'react-icons/fa';
 import './sidebar.scss';
 
-const Sidebar = ({ collapsed, setCollapsed }) => {
+const Sidebar = () => {
   const location = useLocation();
 
   const navItems = [
@@ -18,26 +18,16 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
     { path: '/footer', label: 'Footer', icon: <FaLayerGroup /> },
   ];
 
-  // Collapse sidebar when route changes
-  React.useEffect(() => {
-    setCollapsed(true);
-  }, [location.pathname, setCollapsed]);
-
-  const toggleSidebar = () => setCollapsed(prev => !prev);
-
   return (
-    <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
+    <div className="sidebar">
       <div className="top-section">
-        <div className="logo">{!collapsed && 'Component Gallery'}</div>
-        <div className="toggle-btn" onClick={toggleSidebar}>
-          <FaBars />
-        </div>
+        <div className="logo">Component Gallery</div>
       </div>
       <nav className="nav-links">
         {navItems.map(({ path, label, icon }) => (
           <NavLink to={path} key={path} className="nav-link">
             <div className="icon">{icon}</div>
-            {!collapsed && <span>{label}</span>}
+            <span>{label}</span>
           </NavLink>
         ))}
       </nav>

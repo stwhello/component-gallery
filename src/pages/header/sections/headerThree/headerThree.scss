@@ -1,5 +1,5 @@
 .headerThree {
-  width: calc(100vw - 18vw);
+  width: calc(100vw - 14vw);
   height: 10vh;
   background: linear-gradient(90deg, #ff6ec4, #7873f5);
   display: flex;
@@ -8,7 +8,7 @@
   padding: 0 3vw;
   position: fixed;
   top: 0;
-  left: 18vw;
+  left: 14vw;
   z-index: 999;
   box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.3);
   animation: slideIn 0.8s ease-in-out;

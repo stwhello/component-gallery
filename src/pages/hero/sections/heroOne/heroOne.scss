@@ -1,0 +1,137 @@
+.heroOne {
+  width: 80vw;
+  height: 85vh;
+  margin: auto;
+  padding: 2vh 2vw;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+
+  &__content {
+    width: 100%;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3vh;
+
+    h1 {
+      font-size: 3vw;
+      font-weight: 600;
+      line-height: 1.2;
+
+      span {
+        background: #e6f0ff;
+        border-radius: 0.5vw;
+        padding: 0.2vw 0.6vw;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+
+    button {
+      padding: 0.8vh 2vw;
+      font-size: 1vw;
+      border-radius: 2vw;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .primary {
+      background-color: #000;
+      color: #fff;
+      border: none;
+    }
+
+    .outline {
+      background: transparent;
+      border: 1px solid #000;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vh;
+  }
+
+  &__levels {
+    width: 20vw;
+
+    p {
+      font-weight: 600;
+      font-size: 1.2vw;
+      margin-bottom: 1vh;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1vh;
+
+      .level {
+        text-align: center;
+        padding: 1vh 0.5vw;
+        border-radius: 0.5vw;
+        font-size: 0.9vw;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .a1 {
+        background-color: #94d0ff;
+      }
+      .a2 {
+        background-color: #a2ffb5;
+      }
+      .b1 {
+        background-color: #ffd384;
+      }
+      .b2 {
+        background-color: #ffb347;
+      }
+      .c1 {
+        background-color: #ff7b7b;
+      }
+      .c2 {
+        background-color: #b28dff;
+      }
+    }
+  }
+
+  &__centerImage {
+    width: 30vw;
+
+    img {
+      width: 100%;
+      border-radius: 1vw;
+      object-fit: cover;
+    }
+  }
+
+  .heroOne__activity {
+    width: 20vw;
+    text-align: center;
+
+    p {
+      font-size: 1vw;
+      margin-bottom: 1vh;
+    }
+
+    .recharts-responsive-container {
+      width: 100% !important;
+      height: 200px !important;
+    }
+  }
+}

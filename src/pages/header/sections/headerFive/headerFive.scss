@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
 
 .headerFive {
-  width: calc(100vw - 18vw);
+  width: calc(100vw - 14vw);
   height: 10vh;
   background: linear-gradient(90deg, #0d1b2a, #1b263b); // rich dark blue gradient
   display: flex;
@@ -9,7 +9,7 @@
   justify-content: space-between;
   padding: 0 3vw;
   position: fixed;
-  left: 18vw;
+  left: 14vw;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);

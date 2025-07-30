@@ -12,7 +12,7 @@ import Footer from './pages/footer/Footer';
 function App() {
   const [collapsed, setCollapsed] = useState(false);
 
-  const sidebarWidth = collapsed ? '5vw' : '18vw';
+  const sidebarWidth = collapsed ? '5vw' : '14vw';
   const contentWidth = collapsed ? '95vw' : '82vw';
 
   return (
